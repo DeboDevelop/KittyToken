@@ -58,7 +58,7 @@ describe("KittyToken contract", function() {
 
     it("Should fail if sender doesn't have enough tokens", async function () {
       const initialOwnerBalance = await kittyToken.balanceOf(owner.address);
-      // Try to send 1 token from addr1 (0 tokens) to owner (1000000 tokens).
+      // Try to send 1 token from addr1 (0 tokens) to owner (70000 tokens).
       // `require` will evaluate false and revert the transaction.
       await expect(
         kittyToken.connect(addr1).transfer(owner.address, 1)
