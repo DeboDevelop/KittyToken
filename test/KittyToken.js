@@ -9,6 +9,7 @@ describe("KittyToken contract", function() {
   let addr1;
   let addr2;
   let tokenCap = 100000;
+  let tokenInitialMint = 70000;
   let tokenBlockReward = 2;
 
   beforeEach(async function () {
@@ -16,7 +17,7 @@ describe("KittyToken contract", function() {
     Token = await hre.ethers.getContractFactory("KittyToken");
     [owner, addr1, addr2] = await hre.ethers.getSigners();
 
-    kittyToken = await Token.deploy(tokenCap, tokenBlockReward);
+    kittyToken = await Token.deploy(tokenCap, tokenInitialMint, tokenBlockReward);
   });
 
   describe("Deployment", function () {

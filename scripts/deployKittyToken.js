@@ -2,7 +2,7 @@ const hre = require("hardhat");
 
 async function main() {
   const KittyToken = await hre.ethers.getContractFactory("KittyToken");
-  const kittyTokenContract = await KittyToken.deploy(100000, 2);
+  const kittyTokenContract = await KittyToken.deploy(100000, 70000, 2);
 
   // await kittyTokenContract.waitForDeployment();
 
