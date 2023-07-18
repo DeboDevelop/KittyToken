@@ -3,7 +3,16 @@ require("@nomicfoundation/hardhat-toolbox");
 
 /** @type import('hardhat/config').HardhatUserConfig */
 module.exports = {
-  solidity: "0.8.20",
+  solidity: {
+    compilers: [
+        {
+            version: '0.8.20',
+            settings: {
+                evmVersion: 'paris'
+            }
+        }
+    ]
+  },
   networks: {
     goerli: {
       url: process.env.RPC_GOERLI_ENDPOINT,
