@@ -14,6 +14,12 @@ module.exports = {
     ]
   },
   networks: {
+    hardhat: {
+      forking: {
+        enabled: true,
+        url: process.env.RPC_GOERLI_ENDPOINT,
+      },
+    },
     goerli: {
       url: process.env.RPC_GOERLI_ENDPOINT,
       accounts: [process.env.PRIVATE_KEY]
