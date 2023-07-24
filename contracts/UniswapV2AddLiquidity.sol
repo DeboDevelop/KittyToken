@@ -54,7 +54,6 @@ contract UniswapV2AddLiquidity {
                 address(this),
                 block.timestamp
             );
-        return (amountA, amountB, liquidity);
     }
 
     /**
