@@ -35,10 +35,6 @@ contract KUSDToken is ERC20Capped, ERC20Burnable {
         super._beforeTokenTransfer(from, to, value);
     }
 
-    function destroy() public onlyOwner {
-        selfdestruct(owner);
-    }
-
     modifier onlyOwner {
         require(msg.sender == owner, "Only Owner can call this function");
         _;
